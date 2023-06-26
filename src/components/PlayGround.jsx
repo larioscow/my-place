@@ -8,7 +8,7 @@ export const PlayGround = () => {
 	return (
 		<>
 			<Spline
-				scene='https://prod.spline.design/zHofCWkJjQ8HeRLo/scene.splinecode'
+				scene='https://prod.spline.design/HaLSHO5V4HMyCSpy/scene.splinecode'
 				onLoad={() => {
 					setLoading(false);
 				}}
