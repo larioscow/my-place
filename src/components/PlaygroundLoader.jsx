@@ -7,7 +7,7 @@ export const PlaygroundLoader = ({ loading }) => {
 		left: '50%',
 		transform: 'translate(-50%, -50%)',
 		minwidth: '100px',
-		width: '10%',
+		width: window.screen.width <= 1020 ? '20%' : '10%',
 	};
 	return <BarLoader color='black' cssOverride={override} loading={loading} />;
 };
