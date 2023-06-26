@@ -4,18 +4,13 @@ import { useState } from 'react';
 
 export const PlayGround = () => {
 	const [loading, setLoading] = useState(true);
-	let stage = 0;
 
 	return (
 		<>
 			<Spline
 				scene='https://prod.spline.design/zHofCWkJjQ8HeRLo/scene.splinecode'
 				onLoad={() => {
-					if (stage === 0) {
-						stage++;
-					} else {
-						setLoading(false);
-					}
+					setLoading(false);
 				}}
 			/>
 			<PlaygroundLoader loading={loading} />
