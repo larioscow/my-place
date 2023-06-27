@@ -1,5 +1,5 @@
 const title = document.getElementsByTagName('title');
-const word = 'My Place';
+const word = 'My Place (test)';
 
 const addLetter = letter => {
 	return new Promise(resolve => {

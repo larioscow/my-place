@@ -1,18 +1,13 @@
-import Spline from '@splinetool/react-spline';
 import { PlaygroundLoader } from './PlaygroundLoader';
 import { useState } from 'react';
+import { Scene } from './Scene';
 
 export const PlayGround = () => {
 	const [loading, setLoading] = useState(true);
 
 	return (
 		<>
-			<Spline
-				scene='https://prod.spline.design/xCjdLfrMZQtRWDzA/scene.splinecode'
-				onLoad={() => {
-					setLoading(false);
-				}}
-			/>
+			<Scene setLoading={setLoading} />
 			<PlaygroundLoader loading={loading} />
 		</>
 	);
