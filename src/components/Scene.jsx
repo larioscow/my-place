@@ -1,19 +1,19 @@
 import Spline from '@splinetool/react-spline';
-import { useRef } from 'react';
+// import { useRef, useState } from 'react';
 
 export const Scene = ({ setLoading }) => {
-	const spline = useRef();
+	// const spline = useRef();
+	// const [height, setHeight] = useState(0);
+	// const [width, setWidth] = useState(0);
+	// const [orientation, setOrientation] = useState();
 
 	function onLoad(splineApp) {
-		spline.current = splineApp;
+		// spline.current = splineApp;
+		// setHeight(spline.current._viewportHeight);
+		// setWidth(spline.current._viewportWidth);
+		// const orientation = width > height ? 'horizontal' : 'vertical';
+		// setOrientation(orientation);
 		setLoading(false);
-	}
-
-	function triggerAnimation() {
-		spline.current.emitEvent(
-			'mousehover',
-			'1da5cdca-f395-4979-b26f-924afa36244e'
-		);
 	}
 
 	return (
@@ -21,8 +21,8 @@ export const Scene = ({ setLoading }) => {
 			<Spline
 				scene='https://prod.spline.design/xCjdLfrMZQtRWDzA/scene.splinecode'
 				onLoad={onLoad}
+				onResize={() => console.log()}
 			/>
-			<button onClick={triggerAnimation}>Animation</button>
 		</>
 	);
 };
